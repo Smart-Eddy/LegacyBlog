@@ -7,7 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-import org.study.blog.auth.service.AuthService;
+import org.study.blog.auth.web.service.AuthService;
+
 
 /**
  * @author skPaik
@@ -20,13 +21,13 @@ public class AuthController {
 
 	/** 인증 Service */
 	@Autowired
-	private AuthService authService;
+	private AuthService AuthServiceImpl;
 	
 	@RequestMapping("/")
 	public ModelAndView login(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ModelAndView mav = new ModelAndView();
-		String test = authService.testMethod();
-		System.out.println(test);
+		String test = AuthServiceImpl.testMethod();
+		System.out.println("test method :" + test);
 		mav.setViewName("/login");
 		return mav;
 	}
