@@ -1,8 +1,8 @@
-package org.study.blog.auth.web.service.impl;
+package org.study.blog.auth.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.study.blog.auth.web.service.AuthService;
+import org.study.blog.auth.service.AuthService;
 
 @Service
 public class AuthServiceImpl implements AuthService{

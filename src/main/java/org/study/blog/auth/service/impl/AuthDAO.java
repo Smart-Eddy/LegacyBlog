@@ -1,4 +1,4 @@
-package org.study.blog.auth.web.service.impl;
+package org.study.blog.auth.service.impl;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;

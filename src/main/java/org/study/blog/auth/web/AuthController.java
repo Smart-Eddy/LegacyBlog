@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-import org.study.blog.auth.web.service.AuthService;
+import org.study.blog.auth.service.AuthService;
 
 /**
  * @className AuthController.java
@@ -55,6 +55,7 @@ public class AuthController {
 	public ModelAndView tilesTest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("tilesTest/test");
+		String test = AuthServiceImpl.testMethod();
 		return mav;
 	}
 
