@@ -11,17 +11,10 @@
 	
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven/>
-
+	
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/"/>
-
-	<!-- TilesConfigurer 사용으로 더 이상 사용하지 않음 -->
-	<!-- 	
-		<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<beans:property name="prefix" value="/WEB-INF/views/"/>
-		<beans:property name="suffix" value=".jsp"/>
-		</beans:bean> 
-	-->
+	
 	<!-- Tiles Congifurer & viewResolver  -->
 	<beans:bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
 		<beans:property name="definitions">

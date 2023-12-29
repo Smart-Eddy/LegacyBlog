@@ -26,37 +26,10 @@ public class AuthController {
 	@Autowired
 	private AuthService AuthServiceImpl;
 
-	/**
-	 * @method login
-	 * @description 로그인 테스트 메소드
-	 * @param request
-	 * @param response
-	 * @return
-	 * @throws Exception
-	 */
-	@RequestMapping("/")
+	@RequestMapping("/auth/login.do")
 	public ModelAndView login(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ModelAndView mav = new ModelAndView();
-		String test = AuthServiceImpl.testMethod();
-		mav.addObject("test", test);
-		mav.setViewName("auth/login");
+		
 		return mav;
 	}
-
-	/**
-	 * @method tilesTest
-	 * @description tiles test 메소드 localhost:8080/blog/tilesTest.do 로 요청시 확인 가능
-	 * @param request
-	 * @param response
-	 * @return
-	 * @throws Exception
-	 */
-	@RequestMapping("/tilesTest.do")
-	public ModelAndView tilesTest(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("tilesTest/test");
-		String test = AuthServiceImpl.testMethod();
-		return mav;
-	}
-
 }

@@ -32,13 +32,13 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-				
+		
 		<!-- AspectJ -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
 			<version>${org.aspectj-version}</version>
-		</dependency>	
+		</dependency>
 		
 		<!-- Logging -->
 		<dependency>
@@ -83,7 +83,7 @@
 			<scope>runtime</scope>
 		</dependency>
 		
-		<!--  log4j plug-in -->
+		<!-- log4j plug-in -->
 		<dependency>
 			<groupId>org.bgee.log4jdbc-log4j2</groupId>
 			<artifactId>log4jdbc-log4j2-jdbc4</artifactId>
@@ -96,7 +96,7 @@
 			<artifactId>javax.inject</artifactId>
 			<version>1</version>
 		</dependency>
-				
+		
 		<!-- Servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -115,14 +115,14 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-	
+		
 		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 			<scope>test</scope>
-		</dependency>		
+		</dependency>
 		
 		<!-- ojdbc8 -->
 		<dependency>
@@ -173,7 +173,7 @@
 		<artifactId>tiles-extras</artifactId>
 		<version>3.0.0</version>
 		</dependency>
-
+	
 	</dependencies>
 	<build>
 		<plugins>
