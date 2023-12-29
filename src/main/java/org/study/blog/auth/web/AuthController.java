@@ -29,7 +29,7 @@ public class AuthController {
 	@RequestMapping("/auth/login.do")
 	public ModelAndView login(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ModelAndView mav = new ModelAndView();
-		
+
 		return mav;
 	}
 }
