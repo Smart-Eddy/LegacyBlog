@@ -15,9 +15,11 @@
 
 </head>
 <body>
-	<tiles:insertAttribute name="header"/>
-	<tiles:insertAttribute name="sidebar"/>
-	<tiles:insertAttribute name="body"/>
-	<tiles:insertAttribute name="footer"/>
+	<div class="container-xxl">
+		<tiles:insertAttribute name="header"/>
+		<tiles:insertAttribute name="sidebar"/>
+		<tiles:insertAttribute name="body"/>
+		<tiles:insertAttribute name="footer"/>
+	</div>
 </body>
 </html>
