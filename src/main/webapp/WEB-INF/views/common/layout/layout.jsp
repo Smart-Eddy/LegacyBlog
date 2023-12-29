@@ -12,10 +12,17 @@
 <!-- bootstrap -->
 <script src="resources/js/bootstrap.min.js"></script>
 <link href="resources/css/bootstrap.min.css" rel="stylesheet">
-
+<link href="resources/css/bootstrapCustom.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<style>
+	.container-fluid {
+		padding-left : 0;
+		padding-right : 0;
+	}
+</style>
 </head>
 <body>
-	<div class="container-xxl">
+	<div class="container-fluid">
 		<tiles:insertAttribute name="header"/>
 		<tiles:insertAttribute name="sidebar"/>
 		<tiles:insertAttribute name="body"/>
