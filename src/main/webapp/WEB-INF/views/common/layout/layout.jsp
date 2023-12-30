@@ -22,7 +22,7 @@
 </style>
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="container-fluid d-flex flex-column min-vh-100">
 		<tiles:insertAttribute name="header"/>
 		<tiles:insertAttribute name="sidebar"/>
 		<tiles:insertAttribute name="body"/>
