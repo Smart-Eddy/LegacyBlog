@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-expand-sm navbar-light bg-light border-bottom">
 	<div class="container-fluid">
-		<a class="navbar-brand ms-5" href="#"><i class="bi bi-pencil" style="font-size:3rem;"><u>Blogging</u></i></a>
+		<a class="navbar-brand ms-5" href="#"><i class="bi bi-pencil" style="font-size:2rem;"><u>Blogging</u></i></a>
 		
 		<!-- 햄버거 아이콘 및 메뉴 버튼 -->
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -14,7 +14,7 @@
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav ms-auto me-5">
 				<li class="nav-item">
-					<a class="nav-link" href="#"><i class="bi bi-lightbulb" style="font-size:2.5rem;"></i></a>
+					<a class="nav-link" href="#"><i class="bi bi-lightbulb" style="font-size:2rem;"></i></a>
 				</li>
 			</ul>
 			
