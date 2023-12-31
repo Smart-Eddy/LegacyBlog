@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 
+<script>
+function login() {
+	location.href = "<c:url value='/auth/login.do'/>";
+}
+</script>
 <nav class="navbar navbar-expand-sm navbar-light bg-light border-bottom">
 	<div class="container-fluid">
 		<a class="navbar-brand ms-5" href="#"><i class="bi bi-pencil" style="font-size:2rem;"><u>Blogging</u></i></a>
@@ -19,13 +26,13 @@
 			</ul>
 			
 			<!-- 추가적인 메뉴 아이템들 -->
-			<form class="d-flex me-5">
+			<div class="d-flex me-5">
 				<input class="form-control me-1" type="search" placeholder="검색어를 입력하세요" aria-label="Search">
 				<button class="btn btn-dark btn-outline-light" type="button">
 					<i class="bi bi-search" style="font-size:1.5rem;"></i>
 				</button>
-				<button type="submit" class="btn btn-dark btn-outline-light btn-lg ms-3">LOGIN</button>
-			</form>
+				<button onclick="login(); return false;" class="btn btn-dark btn-outline-light btn-lg ms-3">LOGIN</button>
+			</div>
 		</div>
 	</div>
 </nav>
