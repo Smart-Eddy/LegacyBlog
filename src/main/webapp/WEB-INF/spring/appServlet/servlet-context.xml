@@ -21,6 +21,8 @@
 	<interceptors>
 		<interceptor>
 			<mapping path="/**"/>
+			<!-- 예외 URL 설정 -->
+			<exclude-mapping path="/main.do"/>
 			<beans:bean class="org.study.blog.common.interceptor.Interceptor"/>
 		</interceptor>
 	</interceptors>
