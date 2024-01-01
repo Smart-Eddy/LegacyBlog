@@ -30,7 +30,7 @@ public class AuthController {
 	public ModelAndView login(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ModelAndView mav = new ModelAndView();
 
-		mav.setViewName("/auth/login");
+		mav.setViewName("auth/login");
 		return mav;
 	}
 }

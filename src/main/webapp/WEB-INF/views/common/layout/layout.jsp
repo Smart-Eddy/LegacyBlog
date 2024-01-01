@@ -8,11 +8,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BLOG</title>
 <!-- jQuery -->
-<script src="resources/js/jquery-3.7.1.slim.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery-3.7.1.slim.min.js"></script>
 <!-- bootstrap -->
-<script src="resources/js/bootstrap.min.js"></script>
-<link href="resources/css/bootstrap.min.css" rel="stylesheet">
-<link href="resources/css/bootstrapCustom.css" rel="stylesheet">
+<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+<link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/css/bootstrapCustom.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 <style>
 	.container-fluid {

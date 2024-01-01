@@ -24,7 +24,7 @@ public class Main {
 	public ModelAndView main(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ModelAndView mav = new ModelAndView();
 
-		mav.setViewName("/main/main");
+		mav.setViewName("main/main");
 		return mav;
 	}
 
