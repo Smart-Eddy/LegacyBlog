@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <!DOCTYPE html>
 <html>
@@ -17,12 +18,6 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 <style>
 	.container-fluid {
-<<<<<<< HEAD
-=======
-	/* 	padding-left : 0;
-		padding-right : 0;
-		padding-top : 80px; */
->>>>>>> 8dc78127bf9bdf08a5f45cfc56a08a2956cf3f98
 		padding : 80px 0px 0px 0px;
 	}
 	.login-container {
@@ -33,6 +28,11 @@
 		width: 100%;
 	}
 </style>
+<script>
+	function signUp(){
+		location.href = "<c:url value='/auth/signUp.do'/>";
+	}
+</script>
 </head>
 <body>
 <div class="container-fluid d-flex flex-column min-vh-100">
@@ -41,20 +41,22 @@
 	</div>
 		<div class="login-container mx-auto mt-3">
 			<form>
-				<div class="mb-3">
-					<label for="username" class="form-label">아이디</label>
-					<input type="text" class="form-control" id="username" name="username" required>
+				<div class="form-floating mb-3 mt-3">
+					<input type="text" class="form-control" id="userId" name="userId" required placeholder="Enter userId">
+					<label for="userId" class="form-label">아이디</label>
 				</div>
-				<div class="mb-3">
+				<div class="form-floating mb-3 mt-3">
+					<input type="password" class="form-control" id="password" name="password" required placeholder="Enter password">
 					<label for="password" class="form-label">비밀번호</label>
-					<input type="password" class="form-control" id="password" name="password" required>
 				</div>
 				<div class="mb-3 form-check">
 					<input type="checkbox" class="form-check-input" id="rememberMe" name="rememberMe">
 					<label class="form-check-label" for="rememberMe">아이디 기억하기</label>
 				</div>
 				<div class="mb-3 text-center">
-					<p class="fs-5"><i>아직 회원이 아니신가요?</i> <a href="<c:url value='/main.do'/>" style="color : black">회원가입</a></p>
+					<p class="fs-5"><i>아직 회원이 아니신가요?</i> 
+					<a href="#" onclick="signUp(); return false;" style="color:black">회원가입</a>
+					</p>
 				</div>
 				<div class="d-grid gap-2">
 					<button type="submit" class="btn btn-dark btn-outline-light btn-lg">LOGIN</button>

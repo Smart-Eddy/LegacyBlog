@@ -33,4 +33,12 @@ public class AuthController {
 		mav.setViewName("auth/login");
 		return mav;
 	}
+	
+	@RequestMapping("/auth/signUp.do")
+	public ModelAndView signUp(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		ModelAndView mav = new ModelAndView();
+		
+		mav.setViewName("auth/signUp");
+		return mav;
+	}
 }
