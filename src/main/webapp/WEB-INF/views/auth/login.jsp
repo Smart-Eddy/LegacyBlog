@@ -16,19 +16,16 @@
 <link href="<c:url value='/css/bootstrapCustom.css'/>" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 <style>
-    .container-fluid {
-	/* 	padding-left : 0;
-		padding-right : 0;
-		padding-top : 80px; */
+	.container-fluid {
 		padding : 80px 0px 0px 0px;
 	}
-    .login-container {
-      border: 2px solid #000;
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 600px;
-      width: 100%;
-    }
+	.login-container {
+		border: 2px solid #000;
+		padding: 20px;
+		border-radius: 10px;
+		max-width: 600px;
+		width: 100%;
+	}
 </style>
 </head>
 <body>
