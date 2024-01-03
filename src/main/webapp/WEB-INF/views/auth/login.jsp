@@ -17,6 +17,12 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 <style>
 	.container-fluid {
+<<<<<<< HEAD
+=======
+	/* 	padding-left : 0;
+		padding-right : 0;
+		padding-top : 80px; */
+>>>>>>> 8dc78127bf9bdf08a5f45cfc56a08a2956cf3f98
 		padding : 80px 0px 0px 0px;
 	}
 	.login-container {
@@ -51,7 +57,7 @@
 					<p class="fs-5"><i>아직 회원이 아니신가요?</i> <a href="<c:url value='/main.do'/>" style="color : black">회원가입</a></p>
 				</div>
 				<div class="d-grid gap-2">
-				<button type="submit" class="btn btn-dark btn-outline-light btn-lg">LOGIN</button>
+					<button type="submit" class="btn btn-dark btn-outline-light btn-lg">LOGIN</button>
 				</div>
 			</form>
 		</div>
