@@ -32,6 +32,17 @@
 	function signUp(){
 		location.href = "<c:url value='/auth/signUp.do'/>";
 	}
+	
+	/* 이메일 도메인  직접 입력 선택시 직접 입력창 보여줌 */
+	$(document).ready(function(){
+		$("#emailDomain").change(function(){
+			if($(this).val() === "직접 입력"){
+				$("#customDomain").show();
+			}else{
+				$("#customDomain").hide();
+			}
+		});
+	});
 </script>
 </head>
 <body>
@@ -42,45 +53,42 @@
 	<div class="signUp-container mx-auto mt-3">
 	<form>
 		<div class="mb-3">
-			<label for="userId" class="form-label">아이디</label>
 			<div class="input-group">
-				<input type="text" class="form-control" id="userId" name="userId" required>
-				<button class="btn btn-outline-secondary" type="button" id="checkUserId">중복확인</button>
+				<input type="text" class="form-control" id="userId" name="userId" required placeholder="아이디">
+				<button class="btn btn-light btn-outline-dark" type="button" id="checkUserId">중복확인</button>
 			</div>
 		</div>
-	
+		
 		<div class="mb-3">
-			<label for="password" class="form-label">비밀번호</label>
-			<input type="password" class="form-control" id="password" name="password" required>
+			<input type="password" class="form-control" id="password" name="password" required placeholder="비밀번호">
 		</div>
 	
 		<div class="mb-3">
-			<label for="confirmPassword" class="form-label">비밀번호 확인</label>
 			<div class="input-group">
-				<input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
-				<button class="btn btn-outline-secondary" type="button" id="checkPassword">중복확인</button>
+				<input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required placeholder="비밀번호 확인">
+				<button class="btn btn-light btn-outline-dark" type="button" id="checkPassword">중복확인</button>
 			</div>
 		</div>
 	
 		<div class="input-group mb-3">
-			<input type="text" class="form-control" placeholder="UserEmail" aria-label="Username" aria-describedby="basic-addon1">
+			<input type="text" class="form-control" id="emailId" name="emailId" placeholder="이메일 아이디">
 			<span class="input-group-text" id="basic-addon1">@</span>
-			<select class="form-select" aria-label="Default select example">
-				<option selected>gmail.com</option>
-				<option value="1">One</option>
-				<option value="2">Two</option>
-				<option value="3">Three</option>
-			</select>	
+			<select class="form-select" id="emailDomain" name="emailDomain" aria-label="이메일 도메인 선택">
+				<option selected>도메인 선택</option>
+				<option value="naver">naver.com</option>
+				<option value="daum">daum.net</option>
+				<option value="google">gmail.com</option>
+				<option value="직접 입력">직접 입력</option>
+			</select>
+			<input type="text" class="form-control" id="customDomain" name="customDomain" placeholder="직접 입력" style="display:none;">
 		</div>
-	
+
 		<div class="mb-3">
-			<label for="userId" class="form-label">이름</label>
-			<input type="text" class="form-control" id="userName" name="userName" required>
+			<input type="text" class="form-control" id="userName" name="userName" required placeholder="이름">
 		</div>
 		
 		<div class="mb-3">
-			<label for="userId" class="form-label">생년월일 8자리</label>
-			<input type="text" class="form-control" id="userName" name="userName" required>
+			<input type="text" class="form-control" id="userName" name="userName" required placeholder="생년월일 8자리">
 		</div>
 		
 		<div class="input-group mb-3">
@@ -95,28 +103,36 @@
 			</select>	
 		</div>
 		
-		<div class="input-group mb-3">
+		<div class="row">
 			<!-- 성별 그룹 -->
-			<input type="radio" class="btn-check" name="gender-options" id="male" autocomplete="off" checked>
-			<label class="btn btn-outline-success" for="male">남자</label>
-			<input type="radio" class="btn-check" name="gender-options" id="female" autocomplete="off">
-			<label class="btn btn-outline-danger" for="female">여자</label>
-			<!-- 국적 그룹 -->
-			<input type="radio" class="btn-check" name="nationality-options" id="korean" autocomplete="off" checked>
-			<label class="btn btn-outline-success" for="korean">내국인</label>
-			<input type="radio" class="btn-check" name="nationality-options" id="foreigner" autocomplete="off">
-			<label class="btn btn-outline-danger" for="foreigner">외국인</label>
-		</div>
+			<div class="col">
+				<div class="input-group mb-3">
+					<input type="radio" class="btn-check" name="gender-options" id="male" autocomplete="off" checked>
+					<label class="btn btn-light btn-outline-secondary flex-fill" for="male">남자</label>
+					<input type="radio" class="btn-check" name="gender-options" id="female" autocomplete="off">
+					<label class="btn btn-light btn-outline-secondary flex-fill" for="female">여자</label>
+				</div>
+			</div>
 		
-		<div class="mb-3">
-			<label for="userId" class="form-label">전화번호</label>
-			<div class="input-group">
-				<input type="text" class="form-control" id="userId" name="userId" required>
-				<button class="btn btn-outline-secondary" type="button" id="checkUserId">인증번호발송</button>
+			<!-- 국적 그룹 -->
+			<div class="col">
+				<div class="input-group mb-3">
+					<input type="radio" class="btn-check" name="nationality-options" id="korean" autocomplete="off" checked>
+					<label class="btn btn-light btn-outline-secondary flex-fill" for="korean">내국인</label>
+					<input type="radio" class="btn-check" name="nationality-options" id="foreigner" autocomplete="off">
+					<label class="btn btn-light btn-outline-secondary flex-fill" for="foreigner">외국인</label>
+				</div>
 			</div>
 		</div>
 		
-		<button type="submit" class="btn btn-primary">회원가입</button>
+		<div class="mb-3">
+			<div class="input-group">
+				<input type="text" class="form-control" id="userId" name="userId" required placeholder="휴대전화번호">
+				<button class="btn btn-light btn-outline-dark" type="button" id="checkUserId">인증번호발송</button>
+			</div>
+		</div>
+		
+		<button type="submit" class="btn btn-light btn-outline-dark btn-lg w-100 mt-2">회원가입</button>
 	</form>
 	</div>
 	<span class="mt-3 mb-md-3 text-muted text-center">&copy; 2023 LegacyBlog | <u>Blogging</u> | Education</span>
