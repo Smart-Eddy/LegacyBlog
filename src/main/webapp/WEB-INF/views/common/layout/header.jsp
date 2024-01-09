@@ -32,6 +32,17 @@ function login() {
 					<i class="bi bi-search" style="font-size:1.5rem;"></i>
 				</button>
 				<button onclick="login(); return false;" class="btn btn-dark btn-outline-light btn-lg ms-3">LOGIN</button>
+				<div class="btn-group ms-2 me-3">
+				<button type="button" class="btn btn-warning btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				Hello :) ○○○님!
+				</button>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="#">내 블로그</a></li>
+					<li><a class="dropdown-item" href="#">내 정보</a></li>
+					<li><hr class="dropdown-divider"></li>
+					<li><a class="dropdown-item" href="#">로그아웃</a></li>
+				</ul>
+				</div>
 			</div>
 		</div>
 	</div>
