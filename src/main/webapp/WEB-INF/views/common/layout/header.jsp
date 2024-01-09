@@ -3,8 +3,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 
 <script>
-function login() {
+function login(){
 	location.href = "<c:url value='/auth/login.do'/>";
+}
+function postWrite(){
+	location.href = "<c:url value='/post/postWrite.do'/>";
 }
 </script>
 <nav class="navbar navbar-expand-sm navbar-light bg-light border-bottom">
@@ -31,7 +34,7 @@ function login() {
 				<button onclick="login(); return false;" class="btn btn-dark btn-outline-light btn-lg ms-1">LOGIN</button>
 				<!-- 로그인시 보이는 정보  -->
 				<div class="btn-group ms-2 me-3">
-				<button class="btn btn-warning btn-outline-dark btn-lg ms-3">Write</button>
+				<button onclick="postWrite(); return false;" class="btn btn-warning btn-outline-dark btn-lg ms-3">Write</button>
 				<button type="button" class="btn btn-warning btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 				Hello :) ○○○님!
 				</button>
